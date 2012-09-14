@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>Quicklog </title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="js/ql-scripting.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	</head> 
+	<body>
+		<div data-role="page" data-theme="a" data-content-theme="b">
+
+			<div class="ql-header" data-role="header" data-position="fixed">
+				<a href="day.html" data-direction="reverse" data-icon="arrow-l">Tilbake</a>
+				<h1 class="ui-title">Extras</h1>
+			</div><!-- /header -->
+
+			<div data-role="content" data-theme="c" data-content-theme="b">	
+				<h3>Formål</h3>
+				<div data-role="fieldcontain">
+					<input type="text" id="purpose" name="purpose" value="" style="width:100%;" placeholder="Skriv inn formålet med turen"/>
+				</div>
+				<h3>Godtgjørelse</h3>
+				<div data-role="fieldcontain">
+					<label><input type="checkbox" name="extra1" id="extra1" />Passasjertillegg</label>
+					<label><input type="checkbox" name="extra2" id="extra2" />Tilhengertillegg</label>
+					<label><input type="checkbox" name="extra3" id="extra3" />Tillegg skogs-/ anleggsvei</label>
+				</div>
+				<h3>Utgifter</h3>
+				<div data-role="fieldcontain">
+					<label for="expense1">Bompenger</label>
+					<input type="number" id="expense1" name="expense1" style="float:right;">
+				</div>
+				<div data-role="fieldcontain">
+					<label for="expense2">Parkeringer</label>
+					<input type="number" id="expense2" name="expense2" style="float:right;">
+				</div>
+				<div data-role="fieldcontain">
+					<label for="expense3">Ferjer</label>
+					<input type="number" id="expense3" name="expense3" style="float:right;">
+				</div>
+			</div><!-- /content -->
+	
+			<div data-role="footer" data-position="fixed">
+				<h1>3. Sep</h1>
+			</div>
+		</div><!-- /page -->
+	</body>
+</html>

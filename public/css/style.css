@@ -1,3 +1,16 @@
 .ql-header {
 	border-bottom:3px solid #FFCD00;
 }
+.ql-trip .ui-li-aside{
+	margin:0;
+	font-weight:normal;
+}
+.position-button{
+	padding:20px;
+	border:1px dashed gray;
+	display:inline-block;
+	width:85%;
+}
+li.purpose a{
+	font-weight:normal;
+}

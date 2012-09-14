@@ -1,55 +1,61 @@
 <!DOCTYPE html> 
 <html> 
 	<head> 
-	<title>Quicklog </title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-	<link rel="stylesheet" href="css/style.css" />
-	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-</head> 
-<body> 
+		<title>Quicklog </title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="js/ql-scripting.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	</head> 
+	<body> 
 
-<div data-role="page" data-theme="a" data-content-theme="b">
+		<div data-role="page" data-theme="a" data-content-theme="b">
 
-	<div class="ql-header" data-role="header" data-position="fixed">
-		<a href="index.html" data-icon="arrow-l" data-theme="a" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-btn-up-a" data-shadow="true" data-corners="true" data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">Sep</span>
-				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
-			</span>
-		</a>
-		<h1 class="ui-title">Mandag 3. September</h1>
-		<a href="addtrip.html" data-icon="plus" data-theme="a" class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-shadow="true" data-corners="true" data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">Legg til tur</span>
-				<span class="ui-icon ui-icon-plus ui-icon-shadow"></span>
-			</span>
-		</a>
-	</div><!-- /header -->
+			<div class="ql-header" data-role="header" data-position="fixed">
+				<a href="index.html" data-direction="reverse" data-icon="arrow-l">Sep</a>
+				<h1 class="ui-title">Man 3. Sep</h1>
+				<a href="addtrip.html" data-icon="plus" data-theme="a">Lag tur</a>
+			</div><!-- /header -->
 
-	<div data-role="content" data-theme="c" data-content-theme="b">	
-		<ul data-role="list-view" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
-			
-		</ul>
-	</div><!-- /content -->
-	
-	<div data-role="footer" data-position="fixed">
-		<a href="day.html" data-icon="arrow-l" iconpos="notext" data-iconpos="left" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-btn-up-a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">2. Sep</span>
-				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
-			</span>
-		</a>
-		<h1>3. Sep</h1>
-		<a href="day.html" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-corners="true" data-shadow="true" 	data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">4. Sep</span>
-				<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-			</span>
-		</a>
-	</div>
-</div><!-- /page -->
+			<div data-role="content" data-theme="c" data-content-theme="b" class="ql-trip">	
+				<!-- trip-->
+				<ul data-role="listview" data-inset="true">
+					<li><a href="addtrip.html">Fra<div class="ui-li-aside">QuickLog AS</div></a></li>
+					<li data-theme="e" class="purpose"><a href="extras.html">23 km - Møte</a></li>
+					<li><a href="addtrip.html">Til<div class="ui-li-aside">Stians lager</div></a></li>
+				</ul>
+				<!-- trip-->
+				<ul data-role="listview" data-inset="true">
+					<li><a href="addtrip.html">Fra<div class="ui-li-aside">Stians lager</div></a></li>
+					<li data-theme="e" class="purpose"><a href="extras.html">23 km - Retur</a></li>
+					<li><a href="addtrip.html">Til<div class="ui-li-aside">QuickLog AS</div></a></li>
+				</ul>		
+				<!-- trip-->
+				<ul data-role="listview" data-inset="true">
+					<li><a href="addtrip.">Fra<div class="ui-li-aside">QuickLog AS</div></a></li>
+					<li data-theme="e" class="purpose"><a href="extras.html">&nbsp;</a></li>
+					<li><a href="addtrip.html">Til</a><span class="ui-li-count">Velg destinasjon</span></li>
+				</ul>
+			</div><!-- /content -->
 
-</body>
+			<div data-role="footer" data-position="fixed">
+				<a href="day.html" data-direction="reverse" data-icon="arrow-l" iconpos="notext" data-iconpos="left" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-btn-up-a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span">
+					<span class="ui-btn-inner ui-btn-corner-all">
+						<span class="ui-btn-text">2. Sep</span>
+						<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
+					</span>
+				</a>
+				<h1>3. Sep</h1>
+				<a href="day.html" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-corners="true" data-shadow="true" 	data-iconshadow="true" data-wrapperels="span">
+					<span class="ui-btn-inner ui-btn-corner-all">
+						<span class="ui-btn-text">4. Sep</span>
+						<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
+					</span>
+				</a>
+			</div>
+		</div><!-- /page -->
+
+	</body>
 </html>

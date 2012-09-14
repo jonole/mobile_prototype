@@ -1,49 +1,67 @@
 <!DOCTYPE html> 
 <html> 
 	<head> 
-	<title>Quicklog </title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-	<link rel="stylesheet" href="css/style.css" />
-	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-</head> 
-<body> 
+		<title>Quicklog </title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="js/ql-scripting.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	</head> 
+	<body> 
 
-<div data-role="page" data-theme="a" data-content-theme="b">
+		<div data-role="page" data-theme="a" data-content-theme="b">
 
-	<div class="ql-header" data-role="header" data-position="fixed">
-		<a href="day.html" data-icon="arrow-l" data-theme="a" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-btn-up-a" data-shadow="true" data-corners="true" data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">3. Sep</span>
-				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
-			</span>
-		</a>
-		<h1 class="ui-title">Legg til tur</h1>
-	</div><!-- /header -->
+			<div class="ql-header" data-role="header" data-position="fixed">
+				<a href="day.html" data-direction="reverse" data-icon="arrow-l">Tilbake</a>
+				<h1 class="ui-title">Man 3. Sep</h1>
+				<a href="addtrip.html" data-icon="plus" data-theme="a">Lag tur</a>
+			</div><!-- /header -->
 
-	<div data-role="content" data-theme="c" data-content-theme="b">	
-		<ul data-role="list-view" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
-			
-		</ul>
-	</div><!-- /content -->
-	
-	<div data-role="footer" data-position="fixed">
-		<a href="addtrip.html" data-icon="arrow-l" iconpos="notext" data-iconpos="left" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-btn-up-a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">2. Sep</span>
-				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
-			</span>
-		</a>
-		<h1>3. Sep</h1>
-		<a href="addtrip.html" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-corners="true" data-shadow="true" 	data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">4. Sep</span>
-				<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-			</span>
-		</a>
-	</div>
-</div><!-- /page -->
+			<div data-role="content" data-theme="c" data-content-theme="b">
+				
+				<h3>Velg destinasjon</h3>
+				<div data-role="fieldcontain">
+					<div class="position-button">
+						<a data-role="button" href="#">Min posisjon</a>
+					</div>
+				</div>
+				<div data-role="fieldcontain">				
+					<h4>Dine kontakter i nærheten</h4>
+					<ul data-role="listview" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+						<li><a href="day.html">3D Experten</a></li>
+						<li><a href="day.html">Statoil Haugesundsgata</a></li>
+						<li><a href="day.html">Ostehuset AS</a></li>
+						<li><a href="day.html">Rogaland politidistrikt</a></li>
+					</ul>
+				</div>
+				<div data-role="fieldcontain">
+					<h4>Plasser i nærheten</h4>
+					<a data-role="button" href="#">Hent plasser</a>
+				</div>
+				<div data-role="fieldcontain">
+					<h4>Tidligere besøkte kontakter</h4>
+					<a data-role="button" href="#">Hent kontakter</a>
+				</div>
+			</div><!-- /content -->
 
-</body>
+			<div data-role="footer" data-position="fixed">
+				<a href="addtrip.html" data-direction="reverse" data-icon="arrow-l" iconpos="notext" data-iconpos="left" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-btn-up-a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span">
+					<span class="ui-btn-inner ui-btn-corner-all">
+						<span class="ui-btn-text">2. Sep</span>
+						<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
+					</span>
+				</a>
+				<h1>3. Sep</h1>
+				<a href="addtrip.html" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-corners="true" data-shadow="true" 	data-iconshadow="true" data-wrapperels="span">
+					<span class="ui-btn-inner ui-btn-corner-all">
+						<span class="ui-btn-text">4. Sep</span>
+						<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
+					</span>
+				</a>
+			</div>
+		</div><!-- /page -->
+
+	</body>
 </html>

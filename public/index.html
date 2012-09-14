@@ -1,285 +1,83 @@
 <!DOCTYPE html> 
 <html> 
 	<head> 
-	<title>Jquery mobile test</title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-	<link rel="stylesheet" href="css/style.css" />
-	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-</head> 
-<body> 
+		<title>Jquery mobile test</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<meta charset='utf-8'>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="js/ql-scripting.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	</head> 
+	<body> 
 
-<!-- page month -->
-<div data-role="page" id="month" data-theme="a" data-content-theme="b">
+		<div data-role="page" data-theme="a" data-content-theme="b">
 
-	<div class="ui-header ui-bar-a ql-header" data-role="header" data-position="fixed">
-		<h1 class="ui-title">Kjørebok</h1>
-		<!--<a href="#addtrip" data-transition="slidefade" data-icon="plus" data-theme="a" class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-shadow="true" data-corners="true" data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">Legg til tur</span>
-				<span class="ui-icon ui-icon-plus ui-icon-shadow"></span>
-			</span>
-		</a>-->
-	</div><!-- /header -->
+			<div class="ql-header" data-role="header" data-theme="a" data-position="fixed">
+				<h1 class="ui-title">Kjørebok</h1>
+			</div><!-- /header -->
 
-	<div data-role="content" data-theme="c" data-content-theme="b">	
-		<ul data-role="list-view" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
-			<li data-theme="e" data-icon="arrow-r" data-iconpos="right" data-iconshadow="true" data-wrapperels="div" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-btn-up-e ui-corner-top">
-				<div class="ui-btn-inner ul-li">
-					<div class="ui-btn-text">
-						<a href="#day" data-transition="slidefade" class="ui-link-inherit">
-							Lørdag 1.9
-							<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">0 turer</span>
-						</a>	
-					</div>	
-					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-				</div>
-			</li>
-			<li data-theme="e" data-icon="arrow-r" data-iconpos="right" data-iconshadow="true" data-wrapperels="div" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-btn-up-e">
-				<div class="ui-btn-inner ul-li">
-					<div class="ui-btn-text">
-						<a href="#day" data-transition="slidefade" class="ui-link-inherit">
-							Søndag 2.9
-							<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">0 turer</span>
-						</a>	
-					</div>	
-					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-				</div>
-			</li>
-			<li data-icon="arrow-r" data-iconpos="right" data-iconshadow="true" data-wrapperels="div" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-btn-up-c">
-				<div class="ui-btn-inner ul-li">
-					<div class="ui-btn-text">
-						<a href="#day" data-transition="slidefade" class="ui-link-inherit">
-							Mandag 3.9
-							<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">3 turer - 75km - 350kr</span>
-						</a>	
-					</div>	
-					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-				</div>
-			</li>
-			<li data-icon="arrow-r" data-iconpos="right" data-iconshadow="true" data-wrapperels="div" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-btn-up-c">
-				<div class="ui-btn-inner ul-li">
-					<div class="ui-btn-text">
-						<a href="#day" data-transition="slidefade" class="ui-link-inherit">
-							Tirsdag 4.9
-							<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">1 tur - 8km - 40kr</span>
-						</a>	
-					</div>	
-					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-				</div>
-			</li>
-			<li data-icon="arrow-r" data-iconpos="right" data-iconshadow="true" data-wrapperels="div" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-btn-up-c">
-				<div class="ui-btn-inner ul-li">
-					<div class="ui-btn-text">
-						<a href="#day" data-transition="slidefade" class="ui-link-inherit">
-							Onsdag 5.9
-							<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">2 turer - 23km - 90kr</span>
-						</a>	
-					</div>	
-					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-				</div>
-			</li>
-			<li data-icon="arrow-r" data-iconpos="right" data-iconshadow="true" data-wrapperels="div" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-btn-up-c">
-				<div class="ui-btn-inner ul-li">
-					<div class="ui-btn-text">
-						<a href="#day" data-transition="slidefade" class="ui-link-inherit">
-							Torsdag 6.9
-							<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">6 turer - 302km - 823kr</span>
-						</a>	
-					</div>	
-					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-				</div>
-			</li>
-			<li data-icon="arrow-r" data-iconpos="right" data-iconshadow="true" data-wrapperels="div" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-btn-up-c ui-corner-bottom">
-				<div class="ui-btn-inner ul-li">
-					<div class="ui-btn-text">
-						<a href="#day" data-transition="slidefade" class="ui-link-inherit">
-							Fredag 7.9
-							<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">0 turer</span>
-						</a>	
-					</div>	
-					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-				</div>
-			</li>
-		</ul>
-
-		<ul data-role="list-view" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
-			<li data-theme="e" data-icon="arrow-r" data-iconpos="right" data-iconshadow="true" data-wrapperels="div" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-btn-up-e ui-corner-top">
-				<div class="ui-btn-inner ul-li">
-					<div class="ui-btn-text">
-						<a href="#day" data-transition="slidefade" class="ui-link-inherit">
-							Lørdag 8.9
-							<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">0</span>
-						</a>	
-					</div>	
-					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-				</div>
-			</li>
-			<li data-theme="e" data-icon="arrow-r" data-iconpos="right" data-iconshadow="true" data-wrapperels="div" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-btn-up-e">
-				<div class="ui-btn-inner ul-li">
-					<div class="ui-btn-text">
-						<a href="#day" data-transition="slidefade" class="ui-link-inherit">
-							Søndag 9.9
-							<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">0</span>
-						</a>	
-					</div>	
-					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-				</div>
-			</li>
-			<li data-icon="arrow-r" data-iconpos="right" data-iconshadow="true" data-wrapperels="div" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-btn-up-c">
-				<div class="ui-btn-inner ul-li">
-					<div class="ui-btn-text">
-						<a href="#day" data-transition="slidefade" class="ui-link-inherit">
-							Mandag 10.9
-							<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">3</span>
-						</a>	
-					</div>	
-					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-				</div>
-			</li>
-			<li data-icon="arrow-r" data-iconpos="right" data-iconshadow="true" data-wrapperels="div" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-btn-up-c">
-				<div class="ui-btn-inner ul-li">
-					<div class="ui-btn-text">
-						<a href="#day" data-transition="slidefade" class="ui-link-inherit">
-							Tirsdag 11.9
-							<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">1</span>
-						</a>	
-					</div>	
-					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-				</div>
-			</li>
-			<li data-icon="arrow-r" data-iconpos="right" data-iconshadow="true" data-wrapperels="div" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-btn-up-c">
-				<div class="ui-btn-inner ul-li">
-					<div class="ui-btn-text">
-						<a href="#day" data-transition="slidefade" class="ui-link-inherit">
-							Onsdag 12.9
-							<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">2</span>
-						</a>	
-					</div>	
-					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-				</div>
-			</li>
-			<li data-icon="arrow-r" data-iconpos="right" data-iconshadow="true" data-wrapperels="div" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-btn-up-c">
-				<div class="ui-btn-inner ul-li">
-					<div class="ui-btn-text">
-						<a href="#day" data-transition="slidefade" class="ui-link-inherit">
-							Torsdag 13.9
-							<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">2</span>
-						</a>	
-					</div>	
-					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-				</div>
-			</li>
-			<li data-icon="arrow-r" data-iconpos="right" data-iconshadow="true" data-wrapperels="div" class="ui-btn ui-btn-icon-right ui-li-has-arrow ui-li ui-li-has-count ui-btn-up-c ui-corner-bottom">
-				<div class="ui-btn-inner ul-li">
-					<div class="ui-btn-text">
-						<a href="#day" data-transition="slidefade" class="ui-link-inherit">
-							Fredag 14.9
-							<span class="ui-li-count ui-btn-up-c ui-btn-corner-all">0</span>
-						</a>	
-					</div>	
-					<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-				</div>
-			</li>
-		</ul>
-	</div><!-- /content -->
+			<div data-role="content" data-theme="c" data-content-theme="b">	
+				<ul data-role="listview" data-inset="true">
+					<li data-theme="e"><a href="day.html">Lørdag 1.9</a><span class="ui-li-count">0</span></li>
+					<li data-theme="e"><a href="day.html">Søndag 2.9</a><span class="ui-li-count">0</span></li>
+				</ul>
+				<ul data-role="listview" data-inset="true">
+					<li><a href="day.html">Mandag 3.9</a><span class="ui-li-count">1 tur - 8 km - 40kr</span></li>
+					<li><a href="day.html">Tirsdag 4.9</a><span class="ui-li-count">2 turer - 23 km - 90kr</span></li>
+					<li><a href="day.html">Onsdag 5.9</a><span class="ui-li-count">6 turer - 302 km - 823kr</span></li>
+					<li><a href="day.html">Torsdag 6.9</a><span class="ui-li-count">0</span></li>
+					<li><a href="day.html">Fredag 7.9</a><span class="ui-li-count">1 tur - 12 km - 43kr</span></li>
+					<li data-theme="e"><a href="day.html">Lørdag 8.9</a><span class="ui-li-count">0</span></li>
+					<li data-theme="e"><a href="day.html">Søndag 9.9</a><span class="ui-li-count">0</span></li>
+				</ul>
+				<ul data-role="listview" data-inset="true">
+					<li><a href="day.html">Mandag 10.9</a><span class="ui-li-count">1 tur - 8 km - 40,-</span></li>
+					<li><a href="day.html">Tirsdag 11.9</a><span class="ui-li-count">2 turer - 23 km - 90,-</span></li>
+					<li><a href="day.html">Onsdag 12.9</a><span class="ui-li-count">6 turer - 302 km - 823,-</span></li>
+					<li><a href="day.html">Torsdag 13.9</a><span class="ui-li-count">0 turer</span></li>
+					<li><a href="day.html">Fredag 14.9</a><span class="ui-li-count">1 tur - 12 km - 43,-</span></li>
+					<li data-theme="e"><a href="day.html">Lørdag 15.9</a><span class="ui-li-count">0</span></li>
+					<li data-theme="e"><a href="day.html">Søndag 16.9</a><span class="ui-li-count">0</span></li>
+				</ul>
+				<ul data-role="listview" data-inset="true">
+					<li><a href="day.html">Mandag 17.9</a><span class="ui-li-count">1 tur - 8 km - 40,-</span></li>
+					<li><a href="day.html">Tirsdag 18.9</a><span class="ui-li-count">2 turer - 23 km - 90,-</span></li>
+					<li><a href="day.html">Onsdag 19.9</a><span class="ui-li-count">6 turer - 302 km - 823,-</span></li>
+					<li><a href="day.html">Torsdag 20.9</a><span class="ui-li-count">0</span></li>
+					<li><a href="day.html">Fredag 21.9</a><span class="ui-li-count">1 tur - 12 km - 43,-</span></li>
+					<li data-theme="e"><a href="day.html">Lørdag 22.9</a><span class="ui-li-count">0</span></li>
+					<li data-theme="e"><a href="day.html">Søndag 23.9</a><span class="ui-li-count">0</span></li>
+				</ul>
+				<ul data-role="listview" data-inset="true">
+					<li><a href="day.html">Mandag 24.9</a><span class="ui-li-count">1 tur - 8 km - 40,-</span></li>
+					<li><a href="day.html">Tirsdag 25.9</a><span class="ui-li-count">2 turer - 23 km - 90,-</span></li>
+					<li><a href="day.html">Onsdag 26.9</a><span class="ui-li-count">6 turer - 302 km - 823,-</span></li>
+					<li><a href="day.html">Torsdag 27.9</a><span class="ui-li-count">0</span></li>
+					<li><a href="day.html">Fredag 28.9</a><span class="ui-li-count">1 tur - 12 km - 43,-</span></li>
+					<li data-theme="e"><a href="day.html">Lørdag 29.9</a><span class="ui-li-count">0</span></li>
+					<li data-theme="e"><a href="day.html">Søndag 30.9</a><span class="ui-li-count">0</span></li>
+				</ul>
+		
+			</div><!-- /content -->
 	
-	<div data-role="footer" data-position="fixed">
-		<a href="#month" data-transition="slidefade" data-direction="reverse" data-icon="arrow-l" iconpos="notext" data-iconpos="left" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-btn-up-a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">Aug</span>
-				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
-			</span>
-		</a>
-		<h1>September</h1>
-		<a href="#month" data-transition="slidefade" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-corners="true" data-shadow="true" 	data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">Okt</span>
-				<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-			</span>
-		</a>
-	</div>
-</div>
-<!-- /page -->
+			<div data-role="footer" data-position="fixed">
+				<a href="index.html" data-direction="reverse" data-icon="arrow-l" iconpos="notext" data-iconpos="left" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-btn-up-a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span">
+					<span class="ui-btn-inner ui-btn-corner-all">
+						<span class="ui-btn-text">Aug</span>
+						<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
+					</span>
+				</a>
+				<h1>September</h1>
+				<a href="index.html" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-corners="true" data-shadow="true" 	data-iconshadow="true" data-wrapperels="span">
+					<span class="ui-btn-inner ui-btn-corner-all">
+						<span class="ui-btn-text">Okt</span>
+						<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
+					</span>
+				</a>
+			</div>
+		</div>
 
-<!-- page day -->
-<div data-role="page" id="day" data-theme="a" data-content-theme="b">
-
-	<div class="ql-header" data-role="header" data-position="fixed">
-		<a href="#month" data-transition="slidefade" data-direction="reverse" data-icon="arrow-l" data-theme="a" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-btn-up-a" data-shadow="true" data-corners="true" data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">Sep</span>
-				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
-			</span>
-		</a>
-		<h1 class="ui-title">Man 3. Sep</h1>
-		<a href="#addtrip" data-transition="slidefade" data-icon="plus" data-theme="a" class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-shadow="true" data-corners="true" data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">Lag tur</span>
-				<span class="ui-icon ui-icon-plus ui-icon-shadow"></span>
-			</span>
-		</a>
-	</div><!-- /header -->
-
-	<div data-role="content" data-theme="c" data-content-theme="b">	
-		<ul data-role="list-view" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
-			
-		</ul>
-	</div><!-- /content -->
-	
-	<div data-role="footer" data-position="fixed">
-		<a href="#day" data-transition="slidefade" data-direction="reverse" data-icon="arrow-l" iconpos="notext" data-iconpos="left" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-btn-up-a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">2. Sep</span>
-				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
-			</span>
-		</a>
-		<h1>3. Sep</h1>
-		<a href="#day" data-transition="slidefade" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-corners="true" data-shadow="true" 	data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">4. Sep</span>
-				<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-			</span>
-		</a>
-	</div>
-</div><!-- /page -->
-
-<!-- page addtrip -->
-<div data-role="page" id="addtrip" data-theme="a" data-content-theme="b">
-
-	<div class="ql-header" data-role="header" data-position="fixed">
-		<a href="#day" data-transition="slidefade" data-direction="reverse" data-icon="arrow-l" data-theme="a" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-btn-up-a" data-shadow="true" data-corners="true" data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">3. Sep</span>
-				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
-			</span>
-		</a>
-		<h1 class="ui-title">Legg til tur</h1>
-	</div><!-- /header -->
-
-	<div data-role="content" data-theme="c" data-content-theme="b">	
-		<ul data-role="list-view" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
-			
-		</ul>
-	</div><!-- /content -->
-	
-	<div data-role="footer" data-position="fixed">
-		<a href="#addtrip" data-transition="slidefade" data-direction="reverse" data-icon="arrow-l" iconpos="notext" data-iconpos="left" class="ui-btn-left ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-left ui-btn-up-a" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">2. Sep</span>
-				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
-			</span>
-		</a>
-		<h1>3. Sep</h1>
-		<a href="#addtrip" data-transition="slidefade" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-a" data-corners="true" data-shadow="true" 	data-iconshadow="true" data-wrapperels="span">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-btn-text">4. Sep</span>
-				<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>
-			</span>
-		</a>
-	</div>
-</div><!-- /page -->
-
-</body>
+	</body>
 </html>
